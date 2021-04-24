@@ -11,8 +11,6 @@ const Landing: React.FC = () => {
   const history = useHistory()
   const handleQuery = (query: string) => {
     history.push(`/search?q=${query}`)
-    // fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=0&maxResults=10`)
-    //   .then(response => console.log(response))
   }
   const debouncedAction = useDebounce(handleQuery, 500)
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
