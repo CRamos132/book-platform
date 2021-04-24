@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const BottomNav = styled.nav`
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 8vh;
     width: 100%;
