@@ -5,6 +5,7 @@ import Input from '../components/atoms/Input/Input'
 import BottomNav from '../components/atoms/BottomNav/BottomNav';
 import Main from '../components/templates/Main/Main';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
+import HorizontalScroll from '../components/atoms/HorizontalScroll/HorizontalScroll';
 
 const Landing: React.FC = () => {
   const [value, setValue] = useState('')
@@ -24,7 +25,12 @@ const Landing: React.FC = () => {
   return (
     <Main 
       top={<Input type='search' onChange={handleChange} value={value} name='quey' placeholder='Search' />}
-      body={<div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>}
+      body={<HorizontalScroll>
+          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
+          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
+          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
+          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
+      </HorizontalScroll>}
       bottom={<NavMenu active='home' />}
     />
   );
