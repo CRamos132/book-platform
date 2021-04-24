@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom'
 import useDebounce from '../helpers/debounce'
 import Input from '../components/atoms/Input/Input'
-import BottomNav from '../components/atoms/BottomNav/BottomNav';
 import Main from '../components/templates/Main/Main';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import HorizontalScroll from '../components/atoms/HorizontalScroll/HorizontalScroll';

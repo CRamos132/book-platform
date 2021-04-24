@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import BottomNav from '../components/atoms/BottomNav/BottomNav';
 import Input from '../components/atoms/Input/Input';
-import NavIcon from '../components/atoms/NavIcon/NavIcon';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import Main from '../components/templates/Main/Main';
 import getUrlParam from '../helpers/getUrlParam';
