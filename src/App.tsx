@@ -1,9 +1,21 @@
 import React from 'react';
+import {BrowserRouter, Switch, Route,} from 'react-router-dom'
+import Landing from './pages/Landing'
+import Search from './pages/Search';
 
-function App() {
+const App: React.FC = () => {
+  
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact>
+          <Landing />
+        </Route>
+        <Route path='/search' exact>
+          <Search />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
