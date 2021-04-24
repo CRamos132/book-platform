@@ -19,6 +19,7 @@ const MainWrapper = styled.div`
         flex-direction: column;
         align-items: center;
         margin-top: 30px;
+        margin-bottom: 8vh;
     }
 `
 
