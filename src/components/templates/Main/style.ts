@@ -8,19 +8,17 @@ const MainWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     .top {
-        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        top: 50px;
+        margin-top: 50px;
     }
     .body {
-        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 128px;
+        margin-top: 30px;
     }
 `
 
