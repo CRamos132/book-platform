@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 interface IconProps {
-    active: boolean;
+    active: "active" | "inactive";
 }
 
 const IconWrapper = styled(Link)<IconProps>`
@@ -11,7 +11,7 @@ const IconWrapper = styled(Link)<IconProps>`
     align-items: center;
     justify-content: center;
     color: black;
-    opacity: ${props => props.active ? 1 : .5};
+    opacity: ${props => props.active === 'active' ? 1 : .5};
     text-decoration:none;
 `
 
