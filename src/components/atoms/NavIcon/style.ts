@@ -22,7 +22,7 @@ const Icon = styled.img<IconProps>`
 `
 
 const Label = styled.label<IconProps>`
-    font-size: 10px;
+    font-size: 0.6em;
     text-decoration:none;
     text-transform: capitalize;
 `
