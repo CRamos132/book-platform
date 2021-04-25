@@ -13,11 +13,12 @@ interface Book {
 
 const useQuery = (query: string): [
     any[],
-    'waiting' | 'complete' | 'error',
+    'waiting' | 'complete' | 'error' | 'empty',
     (start: string) => void
 ] => {
     const [books, setBooks] = useState<Book[]>([]);
-    const [status, setStatus] = useState<'waiting' | 'complete' | 'error'>('waiting')
+    const [limit, setLimit] = useState<number>()
+    const [status, setStatus] = useState<'waiting' | 'complete' | 'error' | 'empty'>('waiting')
     useEffect(()=>{
         setStatus('waiting')
         if(!query){
@@ -27,8 +28,13 @@ const useQuery = (query: string): [
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=0&maxResults=12`)
             .then(async response => {
                 const data = await response.json()
-                setBooks(data.items)
-                setStatus('complete')
+                if(data.totalItems === 0){
+                    setStatus('empty')
+                } else {
+                    setLimit(data.totalItems)
+                    setBooks(data.items)
+                    setStatus('complete')
+                }
             })
             .catch(error => {
                 console.log(error)
@@ -38,7 +44,10 @@ const useQuery = (query: string): [
     }, [query])
     const loadMore = (start: string) => {
         const currentBooks = [...books]
-        console.log('oi')
+        if(limit && Number(start) > limit){
+            // make button to load more disapear
+            return
+        }
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=${start}&maxResults=12`)
             .then(async response => {
                 const data = await response.json()
