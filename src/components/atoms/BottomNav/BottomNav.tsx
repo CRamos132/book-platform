@@ -4,6 +4,7 @@ const BottomNav = styled.nav`
     position: fixed;
     bottom: 0;
     height: 8vh;
+    min-height: 60px;
     width: 100%;
     background-color: ${props => props.theme.white};
     padding: 10px;
