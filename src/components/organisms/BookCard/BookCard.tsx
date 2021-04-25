@@ -1,6 +1,9 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom'
 import BookCoverSm from '../../atoms/BookCoverSm/BookCoverSm'
-import {CardWrapper, Title, Author} from './style'
+import Title from '../../atoms/Title/Title'
+import Subtitle from '../../atoms/Subtitle/Subtitle'
+import CardWrapper from '../../atoms/CardWrapper/CardWrapper'
 
 interface BookCardProps {
     title: string;
@@ -10,19 +13,24 @@ interface BookCardProps {
 }
 
 const BookCard: React.FC<BookCardProps> = ({title, id, thumbnail, authors}) => {
+    const history = useHistory()
+    const handleRedirect = () => {
+        history.push(`/book?id=${id}`)
+    }
     return (
         <CardWrapper>
             <BookCoverSm
                 src={thumbnail} 
                 alt={`${title} book cover`}
+                onClick={handleRedirect}
             />
             <Title>{title}</Title>
-            <Author>
+            <Subtitle>
                 By {` `}
                 {authors?.map((author, index) => {
                     return index === authors.length - 1 ? `${author}` : `${author}, `
                 })}
-            </Author>
+            </Subtitle>
         </CardWrapper>
     )
 }
