@@ -32,11 +32,6 @@ const BookList: React.FC<BookListProps> = ({books, status, loadMore}) => {
         <VerticalWrapper>
             {status === 'complete' && books.length > 0 && books?.map((book: Book, index) => {
                 return (
-                    // <BookCoverSm 
-                    //     key={`book_cover_${index}`}
-                    //     src={book?.volumeInfo?.imageLinks?.smallThumbnail || 'https://via.placeholder.com/100x153'} 
-                    //     alt='Cover for book' 
-                    // />
                     <BookCard
                         key={`book_card_${index}`}
                         id={book.id}
