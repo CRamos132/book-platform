@@ -4,7 +4,7 @@ const VerticalWrapper = styled.main`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     width: 90%;
     & > * {
