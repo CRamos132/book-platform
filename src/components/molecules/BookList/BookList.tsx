@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BookCoverSm from '../../atoms/BookCoverSm/BookCoverSm'
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper'
 
 interface BookListProps {
     books: any[];
+    status: 'waiting' | 'complete' | 'error';
+    loadMore: (start: string) => void;
 }
 
 interface Book {
@@ -17,10 +19,16 @@ interface Book {
     }
 }
 
-const BookList: React.FC<BookListProps> = ({books}) => {
+const BookList: React.FC<BookListProps> = ({books, status, loadMore}) => {
+    const [count, setCount] = useState(0)
+    const handleLoad = () => {
+        const newCount = count + 12
+        loadMore(String(newCount))
+        setCount(newCount)
+    }
     return (
         <VerticalWrapper>
-            {books && books.length > 0 && books?.map((book: Book, index) => {
+            {status === 'complete' && books.length > 0 && books?.map((book: Book, index) => {
                 return (
                     <BookCoverSm 
                         key={`book_cover_${index}`}
@@ -29,6 +37,8 @@ const BookList: React.FC<BookListProps> = ({books}) => {
                     />
                 )
             })}
+            {status === 'complete' && <button onClick={handleLoad}>Load more</button>}
+            {status === 'waiting' && <span>Loading</span>}
         </VerticalWrapper>
     )
 }

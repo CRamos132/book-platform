@@ -4,43 +4,35 @@ import BookList from '../components/molecules/BookList/BookList';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import Main from '../components/templates/Main/Main';
 import useDebounce from '../helpers/debounce';
-import getBooks from '../helpers/getBooks';
 import getUrlParam from '../helpers/getUrlParam';
+import useQuery from '../hooks/useQuery';
 
 const Search: React.FC = () => {
     const [displayQuery, setDisplayQuery] = useState('')
-    const [books, setBooks] = useState<any>([])
+    const [query, setQuery] = useState('')
+    const [books, status, loadMore] = useQuery(query)
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const {value} = event.target
         setDisplayQuery(value)
         debouncedAction(value)
     }
-    const handleQuery = (search: string) => {
-        if(!search){
-            return
-        }
-        setBooks([])
-        getBooks(search).then(async response => {
-            const data = await response.json()
-            console.log(data)
-            setBooks(data.items)
-        })
-    }
-    const debouncedAction = useDebounce(handleQuery, 500)
+    const debouncedAction = useDebounce(setQuery, 500)
     useEffect(()=>{
         const newQuery = getUrlParam('q')
         const search = newQuery || ''
         setDisplayQuery(search)
-        getBooks(search).then(async response => {
-            const data = await response.json()
-            console.log(data)
-            setBooks(data.items)
-        })
+        setQuery(search)
     }, [])
     return (
         <Main 
-            top={<Input type='search' name='quey' value={displayQuery} onChange={handleChange} placeholder='Search' />}
-            body={<BookList books={books} />}
+            top={<Input 
+                type='search' 
+                name='query' 
+                value={displayQuery} 
+                onChange={handleChange} 
+                placeholder='Search' 
+            />}
+            body={<BookList books={books} status={status} loadMore={loadMore} />}
             bottom={<NavMenu active='home' />}
         />
     )
