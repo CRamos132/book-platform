@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import BookCoverSm from '../../atoms/BookCoverSm/BookCoverSm'
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper'
+import BookCard from '../../organisms/BookCard/BookCard'
 
 interface BookListProps {
     books: any[];
@@ -9,6 +9,7 @@ interface BookListProps {
 }
 
 interface Book {
+    id: string;
     volumeInfo: {
         authors: string[];
         imageLinks: {
@@ -31,10 +32,17 @@ const BookList: React.FC<BookListProps> = ({books, status, loadMore}) => {
         <VerticalWrapper>
             {status === 'complete' && books.length > 0 && books?.map((book: Book, index) => {
                 return (
-                    <BookCoverSm 
-                        key={`book_cover_${index}`}
-                        src={book?.volumeInfo?.imageLinks?.smallThumbnail || 'https://via.placeholder.com/100x153'} 
-                        alt='Cover for book' 
+                    // <BookCoverSm 
+                    //     key={`book_cover_${index}`}
+                    //     src={book?.volumeInfo?.imageLinks?.smallThumbnail || 'https://via.placeholder.com/100x153'} 
+                    //     alt='Cover for book' 
+                    // />
+                    <BookCard
+                        key={`book_card_${index}`}
+                        id={book.id}
+                        thumbnail={book?.volumeInfo?.imageLinks?.smallThumbnail || 'https://via.placeholder.com/100x153'}
+                        title={book.volumeInfo.title}
+                        authors={book.volumeInfo.authors}
                     />
                 )
             })}
