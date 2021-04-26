@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactHtmlParser from 'react-html-parser'; 
 import Header from '../../atoms/Header/Header'
 import SubHeader from '../../atoms/SubHeader/SubHeader'
 import TextBody from '../../atoms/TextBody/TextBody'
@@ -26,7 +27,7 @@ const BookText: React.FC<BookTextProps> = ({title, subtitle, authors, descriptio
                 )}
             </SubHeader>
             <TextBody>
-                {description}
+                {ReactHtmlParser(description)}
             </TextBody>
         </TextContainer>
     )
