@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import getUrlParam from '../helpers/getUrlParam'
 import BookCoverMd from '../components/atoms/BookCoverMd/BookCoverMd'
 import Details from '../components/templates/Details/Details'
+import BookText from '../components/molecules/BookText/BookText'
 
 const Test = styled.div`
     z-index: -1;
@@ -24,6 +25,7 @@ interface Book {
         };
         title: string;
         subtitle?: string;
+        description: string;
     }
 }
 
@@ -49,10 +51,12 @@ const BookDetails: React.FC = () => {
                         />
                     }
                     center={
-                        <p>
-                            {book?.volumeInfo.title}
-                            {book.volumeInfo.subtitle && `: ${book.volumeInfo.subtitle}`}
-                        </p>
+                        <BookText
+                            title={book.volumeInfo.title}
+                            subtitle={book.volumeInfo.subtitle}
+                            authors={book.volumeInfo.authors}
+                            description={book.volumeInfo.description}
+                        />
                     }
                 />
             )}
