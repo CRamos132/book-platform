@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 const TextBody = styled.div`
-    color: #313131;
-    opacity: 0.6;
     text-align: left;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    font-size: 0.8em;
+    color: rgba(49, 49, 49, 0.6);
 `
 
 export default TextBody
