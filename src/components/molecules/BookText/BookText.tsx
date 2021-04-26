@@ -15,7 +15,7 @@ interface BookTextProps {
 const BookText: React.FC<BookTextProps> = ({title, subtitle, authors, description}) => {
     return (
         <TextContainer>
-            <Header>
+            <Header weight='bold'>
                 {title}
                 {subtitle && (
                     <span className='sub'>: {subtitle}</span>
