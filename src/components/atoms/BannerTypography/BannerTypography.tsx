@@ -4,19 +4,20 @@ import {Header, SubHeader} from './style'
 interface BTProps {
     text: string;
     subHeader?: boolean;
+    color?: string;
 }
 
-const BannerTypography: React.FC<BTProps> = ({text, subHeader, children}) => {
+const BannerTypography: React.FC<BTProps> = ({text, subHeader, children, color = 'white'}) => {
     return (
         <>
         {
             subHeader ? (
-                <SubHeader>
+                <SubHeader color={color}>
                     {text}
                     {children}
                 </SubHeader>
             ) : (
-                <Header>
+                <Header color={color}>
                     {text}
                     {children}
                 </Header>
