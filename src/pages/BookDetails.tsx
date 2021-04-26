@@ -1,21 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import styled from 'styled-components'
 import getUrlParam from '../helpers/getUrlParam'
 import BookCoverMd from '../components/atoms/BookCoverMd/BookCoverMd'
 import Details from '../components/templates/Details/Details'
 import BookText from '../components/molecules/BookText/BookText'
 import BackButton from '../components/atoms/BackButton/BackButton'
 import FloatMenu from '../components/molecules/FloatMenu/FloatMenu'
-
-const Test = styled.div`
-    z-index: -1;
-    position: absolute;
-    display: block;
-    height: 282px;
-    width: 100%;
-    background-color: ${props => props.theme.bgColor};
-    border-bottom-right-radius: 40%;
-`
+import Backdrop from '../components/molecules/Backdrop/Backdrop'
 
 interface Book {
     id: string;
@@ -44,7 +34,7 @@ const BookDetails: React.FC = () => {
     }, [])
     return (
         <>
-            <Test />
+            <Backdrop />
             <BackButton />
             {book && (
                 <Details
