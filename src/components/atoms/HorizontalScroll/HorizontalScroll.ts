@@ -4,10 +4,13 @@ const HorizontalScroll = styled.article`
     display: block;
     width: 100vw;
     min-height: 100px;
-    padding-left: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    padding: 15px 0px 15px 20px;
+    & > * {
+        margin: 0px 10px 0px 0px;
+    }
 `
 
 export default HorizontalScroll
