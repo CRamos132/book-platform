@@ -5,6 +5,7 @@ import BookCoverMd from '../components/atoms/BookCoverMd/BookCoverMd'
 import Details from '../components/templates/Details/Details'
 import BookText from '../components/molecules/BookText/BookText'
 import BackButton from '../components/atoms/BackButton/BackButton'
+import FloatMenu from '../components/molecules/FloatMenu/FloatMenu'
 
 const Test = styled.div`
     z-index: -1;
@@ -62,6 +63,7 @@ const BookDetails: React.FC = () => {
                     }
                 />
             )}
+            <FloatMenu />
         </>
     )
 }
