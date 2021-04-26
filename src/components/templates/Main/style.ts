@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 const MainWrapper = styled.div`
     position: relative;
-    width: 100vw;
-    min-height: 99vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +18,8 @@ const MainWrapper = styled.div`
         flex-direction: column;
         align-items: center;
         margin-top: 30px;
-        margin-bottom: 8vh;
+        min-height: 50vh;
+        margin-bottom: 10vh;
     }
 `
 
