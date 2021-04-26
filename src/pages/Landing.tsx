@@ -10,6 +10,7 @@ import TextContainer from '../components/atoms/TextContainer/TextContainer';
 import BookBanner from '../components/organisms/BookBanner/BookBanner';
 import HomeHeader from '../components/molecules/HomeHeader/HomeHeader';
 import ReviewCard from '../components/molecules/ReviewCard/ReviewCard';
+import CurrentCard from '../components/organisms/CurrentCard/CurrentCard';
 
 const Landing: React.FC = () => {
   const [value, setValue] = useState('')
@@ -42,6 +43,7 @@ const Landing: React.FC = () => {
               <BookBanner />
           </HorizontalScroll>
           <HomeHeader title='Currently Reading' link='All' to='/' />
+          <CurrentCard />
           <HomeHeader title='Reviews of The Days' link='All Video' to='/' />
           <ReviewCard />
         </TextContainer>
