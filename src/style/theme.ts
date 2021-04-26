@@ -3,6 +3,7 @@ const theme  = {
     lightBg: '#fffdf9',
     white: '#FDFCFC',
     gray: '#54565A',
+    contrast: '#FF6978',
     shadow: '3px 6px 23px rgba(107, 103, 70, 0.125901)'
 }
 
