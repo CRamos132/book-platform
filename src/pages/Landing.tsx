@@ -5,6 +5,9 @@ import Input from '../components/atoms/Input/Input'
 import Main from '../components/templates/Main/Main';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import HorizontalScroll from '../components/atoms/HorizontalScroll/HorizontalScroll';
+import Header from '../components/atoms/Header/Header';
+import TextContainer from '../components/atoms/TextContainer/TextContainer';
+import BookBanner from '../components/organisms/BookBanner/BookBanner';
 
 const Landing: React.FC = () => {
   const [value, setValue] = useState('')
@@ -22,12 +25,21 @@ const Landing: React.FC = () => {
   return (
     <Main 
       top={<Input type='search' onChange={handleChange} value={value} name='quey' placeholder='Search' />}
-      body={<HorizontalScroll>
-          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
-          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
-          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
-          <div style={{height: '50px', width: '300px', display: 'inline-block'}}>Oi</div>
-      </HorizontalScroll>}
+      body={
+        <TextContainer>
+          <Header>
+            Hi, {''}
+            <span className='colored'>
+              Mehmed Al Fatih 👋
+            </span>
+          </Header>
+          <HorizontalScroll>
+              <BookBanner />
+              <BookBanner />
+              <BookBanner />
+          </HorizontalScroll>
+        </TextContainer>
+      }
       bottom={<NavMenu active='home' />}
     />
   );
