@@ -4,6 +4,7 @@ import getUrlParam from '../helpers/getUrlParam'
 import BookCoverMd from '../components/atoms/BookCoverMd/BookCoverMd'
 import Details from '../components/templates/Details/Details'
 import BookText from '../components/molecules/BookText/BookText'
+import BackButton from '../components/atoms/BackButton/BackButton'
 
 const Test = styled.div`
     z-index: -1;
@@ -43,6 +44,7 @@ const BookDetails: React.FC = () => {
     return (
         <>
             <Test />
+            <BackButton />
             {book && (
                 <Details
                     top={
