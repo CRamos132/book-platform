@@ -39,16 +39,17 @@ const Background = styled.div`
 
 interface CurrentProps {
   book: Book;
+  id: string;
 }
 
-const CurrentCard: React.FC<CurrentProps> = ({ book }) => {
+const CurrentCard: React.FC<CurrentProps> = ({ book, id }) => {
   const history = useHistory();
   const authors = getAuthors(book.volumeInfo.authors);
   const handleClick = (): void => {
     history.push(`/book?id=${book.id}`);
   };
   return (
-    <ReadingWrapper onKeyDown={handleClick} onClick={handleClick}>
+    <ReadingWrapper id={id} onKeyDown={handleClick} onClick={handleClick}>
       <Background>
         <img
           className="top-right"
