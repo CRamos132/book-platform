@@ -69,7 +69,7 @@ const Landing: React.FC = () => {
           type="search"
           onChange={handleChange}
           value={qValue}
-          name="quey"
+          name="query"
           placeholder="Search"
         />
     )}
@@ -84,11 +84,12 @@ const Landing: React.FC = () => {
             </span>
           </Header>
           <HomeHeader title="Discover new books" link="More" to="/" />
-          <HorizontalScroll>
+          <HorizontalScroll id="main-books">
             {bookArray.map(((book, index) => {
               const type = index % 2 ? '2' : '1';
               return (
                 <BookBanner
+                  id={`main-book-${index}`}
                   key={`book_banner${book.id}`}
                   type={type}
                   book={book}
@@ -97,7 +98,7 @@ const Landing: React.FC = () => {
             }))}
           </HorizontalScroll>
           <HomeHeader title="Currently Reading" link="All" to="/" />
-          <CurrentCard book={book3} />
+          <CurrentCard id="currently-reading" book={book3} />
           <HomeHeader title="Reviews of The Days" link="All Video" to="/" />
           <ReviewCard />
         </TextContainer>
