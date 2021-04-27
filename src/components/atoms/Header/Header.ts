@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface HeaderProps {
     weight?: string;
@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header = styled.h1<HeaderProps>`
     font-size: 1.3em;
-    font-weight: ${props => props.weight === 'bold' ? 'bold' : 600};
+    font-weight: ${(props) => (props.weight === 'bold' ? 'bold' : 600)};
     width: 100%;
     text-align: left;
     color: rgba(54, 56, 58, 1);
@@ -14,8 +14,8 @@ const Header = styled.h1<HeaderProps>`
         font-weight: 400;
     }
     .colored {
-        color: ${props => props.theme.contrast};
+        color: ${(props) => props.theme.contrast};
     }
-`
+`;
 
-export default Header
+export default Header;

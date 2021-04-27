@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Banner = styled.article`
     display: inline-block;
@@ -20,6 +20,6 @@ const Banner = styled.article`
         height: 111px;
         width: auto;
     }
-`
+`;
 
-export default Banner
+export default Banner;

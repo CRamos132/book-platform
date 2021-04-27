@@ -1,16 +1,20 @@
-import {useRef} from 'react'
+import { useRef } from 'react';
 
-const useDebounce = (action: (...args: string[]) => void, wait: number) => {
-    const timeoutRef = useRef<number | undefined>(undefined)
+const useDebounce = (
+  action: (...args: string[]) => void,
+  wait: number,
+): (...args: string[]
+) => void => {
+  const timeoutRef = useRef<number | undefined>(undefined);
 
-    const debouncedAction = (...args: string[]) => {
-        window.clearTimeout(timeoutRef.current)
-        timeoutRef.current = window.setTimeout(()=>{
-            action(...args);
-        }, wait)
-    }
+  const debouncedAction = (...args: string[]): void => {
+    window.clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => {
+      action(...args);
+    }, wait);
+  };
 
-    return debouncedAction
-}
+  return debouncedAction;
+};
 
-export default useDebounce
+export default useDebounce;

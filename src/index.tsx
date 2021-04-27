@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {ThemeProvider} from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 import App from './App';
-import './style/global.css'
+import './style/global.css';
 import theme from './style/theme';
 
 ReactDOM.render(
@@ -11,5 +11,5 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

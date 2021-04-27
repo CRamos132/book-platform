@@ -1,5 +1,5 @@
-import React from 'react'
-import {Header, SubHeader} from './style'
+import React from 'react';
+import { Header, SubHeader } from './style';
 
 interface BTProps {
     text: string;
@@ -7,24 +7,24 @@ interface BTProps {
     color?: string;
 }
 
-const BannerTypography: React.FC<BTProps> = ({text, subHeader, children, color = 'white'}) => {
-    return (
-        <>
-        {
+const BannerTypography: React.FC<BTProps> = ({
+  text, subHeader, children, color = 'white',
+}) => (
+  <>
+    {
             subHeader ? (
-                <SubHeader color={color}>
-                    {text}
-                    {children}
-                </SubHeader>
+              <SubHeader color={color}>
+                {text}
+                {children}
+              </SubHeader>
             ) : (
-                <Header color={color}>
-                    {text}
-                    {children}
-                </Header>
+              <Header color={color}>
+                {text}
+                {children}
+              </Header>
             )
         }
-        </>
-    )
-}
+  </>
+);
 
-export default BannerTypography
+export default BannerTypography;

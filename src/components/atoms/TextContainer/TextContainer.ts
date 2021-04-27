@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const TextContainer = styled.article`
     width: 90%;
@@ -6,6 +6,6 @@ const TextContainer = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`;
 
-export default TextContainer
+export default TextContainer;

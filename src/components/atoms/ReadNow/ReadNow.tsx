@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 interface TextProps {
     regularColor?: string;
@@ -20,28 +20,26 @@ const Text = styled.div<TextProps>`
     }
     strong {
         font-weight: 700;
-        color: ${props => props.highlightColor};
+        color: ${(props) => props.highlightColor};
         margin: 0 4px;
     }
     span {
         
         font-weight: 400;
-        color: ${props => props.regularColor};
+        color: ${(props) => props.regularColor};
     }
-`
+`;
 
 interface ReadNowProps extends TextProps {
     src: string;
 }
-
-const ReadNow: React.FC<ReadNowProps> = ({regularColor = 'white', highlightColor = 'white', src, children}) => {
-    // './images/graphic.svg'
-    return (
-        <Text regularColor={regularColor} highlightColor={highlightColor}>
-            <img src={src} alt='Graphic' />
-            {children}
-        </Text>
-    )
-}
-
-export default ReadNow
+// './images/graphic.svg'
+const ReadNow: React.FC<ReadNowProps> = ({
+  regularColor = 'white', highlightColor = 'white', src, children,
+}) => (
+  <Text regularColor={regularColor} highlightColor={highlightColor}>
+    <img src={src} alt="Graphic" />
+    {children}
+  </Text>
+);
+export default ReadNow;

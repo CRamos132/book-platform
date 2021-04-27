@@ -1,5 +1,5 @@
-import React from 'react'
-import { Action, HeaderWrapper, Title } from './style'
+import React from 'react';
+import { Action, HeaderWrapper, Title } from './style';
 
 interface HomeHeaderProps {
     title: string;
@@ -7,13 +7,11 @@ interface HomeHeaderProps {
     to: string;
 }
 
-const HomeHeader: React.FC<HomeHeaderProps> = ({title, link, to}) => {
-    return (
-        <HeaderWrapper>
-            <Title>{title}</Title>
-            <Action to={to}>{link}</Action>
-        </HeaderWrapper>
-    )
-}
+const HomeHeader: React.FC<HomeHeaderProps> = ({ title, link, to }) => (
+  <HeaderWrapper>
+    <Title>{title}</Title>
+    <Action to={to}>{link}</Action>
+  </HeaderWrapper>
+);
 
-export default HomeHeader
+export default HomeHeader;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const MainWrapper = styled.div`
     position: relative;
@@ -21,6 +21,6 @@ const MainWrapper = styled.div`
         min-height: 50vh;
         margin-bottom: 10vh;
     }
-`
+`;
 
-export {MainWrapper}
+export { MainWrapper };

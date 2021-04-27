@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const ReviewWrapper = styled.article`
     width: 100%;
@@ -12,6 +12,6 @@ const ReviewWrapper = styled.article`
     img {
         width: 100%;
     }
-`
+`;
 
-export default ReviewWrapper
+export default ReviewWrapper;

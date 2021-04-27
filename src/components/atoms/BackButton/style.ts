@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const TransparentButton = styled.button`
     position: absolute;
@@ -10,6 +10,6 @@ const TransparentButton = styled.button`
         height: 14px;
         width: 14px;
     }
-`
+`;
 
-export {TransparentButton}
+export { TransparentButton };

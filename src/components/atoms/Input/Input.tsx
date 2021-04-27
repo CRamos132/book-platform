@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Input = styled.input`
-    background-color: ${props => props.theme.white};
+    background-color: ${(props) => props.theme.white};
     border-radius: 10px;
     font-size: 0.9em;
     color: black;
@@ -11,11 +11,11 @@ const Input = styled.input`
     border: none;
     ::placeholder,
     ::-webkit-input-placeholder {
-        color: ${props => props.theme.gray};
+        color: ${(props) => props.theme.gray};
     }
     :-ms-input-placeholder {
-        color: ${props => props.theme.gray};
+        color: ${(props) => props.theme.gray};
     }
-`
+`;
 
-export default Input
+export default Input;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Title = styled.span`
     font-size: 0.7em;
@@ -6,6 +6,6 @@ const Title = styled.span`
     width: 100%;
     text-align: left;
     font-weight: bold;
-`
+`;
 
-export default Title
+export default Title;

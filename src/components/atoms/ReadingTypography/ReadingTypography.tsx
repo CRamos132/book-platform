@@ -1,5 +1,5 @@
-import React from 'react'
-import {Header, SubHeader} from './style'
+import React from 'react';
+import { Header, SubHeader } from './style';
 
 interface BTProps {
     text: string;
@@ -7,24 +7,24 @@ interface BTProps {
     color?: string;
 }
 
-const ReadingTypography: React.FC<BTProps> = ({text, subHeader, children, color = 'black'}) => {
-    return (
-        <>
-        {
+const ReadingTypography: React.FC<BTProps> = ({
+  text, subHeader, children, color = 'black',
+}) => (
+  <>
+    {
             subHeader ? (
-                <SubHeader color={color}>
-                    {text}
-                    {children}
-                </SubHeader>
+              <SubHeader color={color}>
+                {text}
+                {children}
+              </SubHeader>
             ) : (
-                <Header color={color}>
-                    {text}
-                    {children}
-                </Header>
+              <Header color={color}>
+                {text}
+                {children}
+              </Header>
             )
         }
-        </>
-    )
-}
+  </>
+);
 
-export default ReadingTypography
+export default ReadingTypography;

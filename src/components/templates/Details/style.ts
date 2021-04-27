@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const DetailsWrapper = styled.main`
     display: flex;
@@ -19,6 +19,6 @@ const DetailsWrapper = styled.main`
         width: 100%;
         margin-top: 31px;
     }
-`
+`;
 
-export {DetailsWrapper}
+export { DetailsWrapper };

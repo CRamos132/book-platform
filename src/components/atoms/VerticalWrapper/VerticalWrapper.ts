@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const VerticalWrapper = styled.main`
     display: flex;
@@ -10,6 +10,6 @@ const VerticalWrapper = styled.main`
     & > * {
         margin-bottom: 12px;
     }
-`
+`;
 
-export default VerticalWrapper
+export default VerticalWrapper;

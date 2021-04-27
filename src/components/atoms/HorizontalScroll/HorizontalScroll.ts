@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const HorizontalScroll = styled.article`
     display: block;
@@ -11,6 +11,6 @@ const HorizontalScroll = styled.article`
     & > * {
         margin: 0px 10px 0px 0px;
     }
-`
+`;
 
-export default HorizontalScroll
+export default HorizontalScroll;

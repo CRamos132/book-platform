@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const TextBody = styled.div`
     text-align: left;
@@ -7,6 +7,6 @@ const TextBody = styled.div`
     font-size: 0.8em;
     color: rgba(49, 49, 49, 0.6);
     margin-bottom: 150px;
-`
+`;
 
-export default TextBody
+export default TextBody;

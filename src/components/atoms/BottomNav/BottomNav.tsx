@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const BottomNav = styled.nav`
     position: fixed;
@@ -6,12 +6,12 @@ const BottomNav = styled.nav`
     height: 8vh;
     min-height: 60px;
     width: 100%;
-    background-color: ${props => props.theme.white};
+    background-color: ${(props) => props.theme.white};
     padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-`
+`;
 
-export default BottomNav
+export default BottomNav;

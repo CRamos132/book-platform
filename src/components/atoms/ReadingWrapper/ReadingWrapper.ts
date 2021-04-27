@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const ReadingWrapper = styled.article`
     position: relative;
@@ -23,6 +23,6 @@ const ReadingWrapper = styled.article`
     .align-bottom {
         margin-top: auto;
     }
-`
+`;
 
-export default ReadingWrapper
+export default ReadingWrapper;

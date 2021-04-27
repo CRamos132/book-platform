@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const ImageWrapper = styled.div`
     position: relative;
@@ -40,6 +40,6 @@ const ImageWrapper = styled.div`
         height: 24px;
         width: 24px;
     }
-`
+`;
 
-export default ImageWrapper
+export default ImageWrapper;

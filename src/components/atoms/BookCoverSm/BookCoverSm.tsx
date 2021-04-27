@@ -5,6 +5,6 @@ const BookCoverSm = styled.img`
     max-width: 29vw;
     width: auto;
     cursor: pointer;
-`
+`;
 
-export default BookCoverSm
+export default BookCoverSm;

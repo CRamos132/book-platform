@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const CardWrapper = styled.article`
     display: flex;
@@ -6,6 +6,6 @@ const CardWrapper = styled.article`
     align-items: center;
     max-width: 29%;
     color: rgba(49, 49, 49, 0.8);
-`
+`;
 
-export default CardWrapper
+export default CardWrapper;
