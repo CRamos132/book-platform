@@ -8,6 +8,7 @@ const ReadingWrapper = styled.article`
     flex-direction: row;
     align-items: center;
     margin-top: 15px;
+    cursor: pointer;
     .book-cover {
         margin-left: 20px;
         margin-right: 10px;
