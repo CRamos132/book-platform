@@ -48,9 +48,9 @@ const Landing: React.FC = () => {
           </Header>
           <HomeHeader title="Discover new books" link="More" to="/" />
           <HorizontalScroll>
-            <BookBanner />
-            <BookBanner />
-            <BookBanner />
+            <BookBanner type="1" />
+            <BookBanner type="2" />
+            <BookBanner type="1" />
           </HorizontalScroll>
           <HomeHeader title="Currently Reading" link="All" to="/" />
           <CurrentCard />
