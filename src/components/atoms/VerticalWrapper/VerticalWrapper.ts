@@ -6,6 +6,7 @@ const VerticalWrapper = styled.main`
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-around;
+    max-width: 700px;
     width: 90%;
     & > * {
         margin-bottom: 12px;
