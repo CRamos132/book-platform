@@ -1,37 +1,45 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Text = styled.div`
+interface TextProps {
+    regularColor?: string;
+    highlightColor?: string;
+}
+
+const Text = styled.div<TextProps>`
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: auto;
     font-size: 0.6em;
-    color: white;
+    /* color: white; */
     img {
         height: 16px;
         width: 16px;
         margin-right: 2px;
     }
-    b {
+    strong {
         font-weight: 700;
+        color: ${props => props.highlightColor};
+        margin: 0 4px;
     }
     span {
-        margin-left: 4px;
+        
         font-weight: 400;
+        color: ${props => props.regularColor};
     }
 `
 
-const ReadNow: React.FC = () => {
+interface ReadNowProps extends TextProps {
+    src: string;
+}
+
+const ReadNow: React.FC<ReadNowProps> = ({regularColor = 'white', highlightColor = 'white', src, children}) => {
+    // './images/graphic.svg'
     return (
-        <Text>
-            <img src='./images/graphic.svg' alt='Graphic' />
-            <strong>
-                +120 
-            </strong>
-            <span>
-                Read Now
-            </span>
+        <Text regularColor={regularColor} highlightColor={highlightColor}>
+            <img src={src} alt='Graphic' />
+            {children}
         </Text>
     )
 }
