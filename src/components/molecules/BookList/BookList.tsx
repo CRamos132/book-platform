@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Button from '../../atoms/Button/Button'
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper'
 import BookCard from '../../organisms/BookCard/BookCard'
 
@@ -41,7 +42,7 @@ const BookList: React.FC<BookListProps> = ({books, status, loadMore}) => {
                     />
                 )
             })}
-            {status === 'complete' && <button onClick={handleLoad}>Load more</button>}
+            {status === 'complete' && <Button onClick={handleLoad}>Load more</Button>}
             {status === 'waiting' && <span>Loading</span>}
             {status === 'empty' && <span>No books were found</span>}
         </VerticalWrapper>

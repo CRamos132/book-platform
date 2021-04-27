@@ -4,7 +4,7 @@ const CardWrapper = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30%;
+    max-width: 29%;
     color: rgba(49, 49, 49, 0.8);
 `
 
