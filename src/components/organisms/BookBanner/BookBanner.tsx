@@ -10,7 +10,14 @@ const BookBanner: React.FC = () => {
                 <div style={{display: 'flex', flexDirection: 'column'}}>
                     <BannerTypography text='Hooked' />
                     <BannerTypography text='Nir Eyal' subHeader={true} />
-                    <ReadNow />
+                    <ReadNow src='./images/graphic.svg'>
+                        <strong>
+                            +120 
+                        </strong>
+                        <span>
+                            Read Now
+                        </span>
+                    </ReadNow>
                 </div>
                 <img src='https://via.placeholder.com/100x153' alt='Book cover' />
             </div>
