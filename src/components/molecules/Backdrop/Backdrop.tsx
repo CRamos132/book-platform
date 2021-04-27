@@ -7,7 +7,7 @@ const Backdrop: React.FC = () => (
     <ImageWrapper>
       <img
         className="top-left"
-        src="./images/linedCircle.svg"
+        src="./images/croppedCircle.svg"
         alt="backdrop circle"
       />
       <img

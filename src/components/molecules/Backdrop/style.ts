@@ -6,11 +6,10 @@ const ImageWrapper = styled.div`
     height: 100%;
     .top-left {
         position: absolute;
-        top: -25px;
-        right: -25px;
+        top: 0;
+        right: 0;
         height: 100px;
         width: 100px;
-        transform: rotate(25deg);
     }
     .bottom-mid {
         position: absolute;
