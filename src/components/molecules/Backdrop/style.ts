@@ -6,10 +6,11 @@ const ImageWrapper = styled.div`
     height: 100%;
     .top-left {
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: -25px;
+        right: -25px;
         height: 100px;
         width: 100px;
+        transform: rotate(25deg);
     }
     .bottom-mid {
         position: absolute;
@@ -17,7 +18,7 @@ const ImageWrapper = styled.div`
         right: 89.11px;
         height: 48px;
         width: 48px;
-        transform: rotate(180deg);
+        transform: rotate(25deg);
     }
     .left-blue {
         position: absolute;

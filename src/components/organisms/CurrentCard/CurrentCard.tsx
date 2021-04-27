@@ -16,6 +16,8 @@ const Background = styled.div`
         position: absolute;
         right: -20px;
         top: -20px;
+        height: 69px;
+        width: 69px;
     }
     .top-mid {
         position: absolute;
