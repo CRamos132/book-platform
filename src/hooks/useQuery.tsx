@@ -33,7 +33,11 @@ const useQuery = (query: string): [
     )
       .then(async (response) => {
         const data = await response.json();
-        if (data.totalItems === 0) {
+        if (response.status !== 200) {
+          setStatus('error');
+          return;
+        }
+        if (data.totalItems === 0 || !data.totalItems) {
           setStatus('empty');
         } else {
           setLimit(data.totalItems);
