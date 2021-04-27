@@ -97,7 +97,7 @@ const Landing: React.FC = () => {
             }))}
           </HorizontalScroll>
           <HomeHeader title="Currently Reading" link="All" to="/" />
-          <CurrentCard />
+          <CurrentCard book={book3} />
           <HomeHeader title="Reviews of The Days" link="All Video" to="/" />
           <ReviewCard />
         </TextContainer>
