@@ -17,6 +17,12 @@ const Wrapper = styled.main`
     }
     .btn-wrapper {
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > * {
+            margin: 10px;
+        }
     }
 `;
 
