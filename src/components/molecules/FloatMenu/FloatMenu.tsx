@@ -16,11 +16,21 @@ const FloatMenu: React.FC<FloatMenuProps> = ({ book }) => {
   };
   return (
     <FloatNav>
-      <FloatIcon action={handleClick} src="./images/bookOpen.svg" title="Read" />
+      <FloatIcon
+        id="read-btn"
+        action={handleClick}
+        src="./images/bookOpen.svg"
+        title="Read"
+      />
       <VerticalLine />
-      <FloatIcon action={handleClick} src="./images/headphones.svg" title="Listen" />
+      <FloatIcon
+        id="listen-btn"
+        action={handleClick}
+        src="./images/headphones.svg"
+        title="Listen"
+      />
       <VerticalLine />
-      <FloatIcon src="./images/share.svg" title="Share" />
+      <FloatIcon id="share-btn" src="./images/share.svg" title="Share" />
     </FloatNav>
   );
 };

@@ -20,7 +20,7 @@ const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
   };
 
   return (
-    <TransparentButton onClick={handleClick}>
+    <TransparentButton id="back-button" onClick={handleClick}>
       <img src="./images/back.svg" alt="Arrow left" />
     </TransparentButton>
   );

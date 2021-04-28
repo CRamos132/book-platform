@@ -5,16 +5,19 @@ interface NavIconsProps {
     src: string;
     title: string;
     action?: ()=>void;
+    id: string;
 }
 
-const FloatIcon: React.FC<NavIconsProps> = ({ src, title, action }) => {
+const FloatIcon: React.FC<NavIconsProps> = ({
+  src, title, action, id,
+}) => {
   const handleClick = (): void => {
     if (action) {
       action();
     }
   };
   return (
-    <IconWrapper onClick={handleClick}>
+    <IconWrapper id={id} onClick={handleClick}>
       <Icon src={src} alt={`Path to ${title}`} />
       <Label>{title}</Label>
     </IconWrapper>
