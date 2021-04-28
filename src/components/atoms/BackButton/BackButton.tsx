@@ -11,8 +11,11 @@ const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
   const handleClick = (): void => {
     if (onClick) {
       onClick();
-    } else {
+    // checks if the user history is empty
+    } else if (history.action !== 'POP') {
       history.goBack();
+    } else {
+      history.push('/');
     }
   };
 
