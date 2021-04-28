@@ -6,6 +6,8 @@ The project was structured to use [Atomic Design](https://github.com/danilowoz/r
 
 The deployed project can be found [here](https://book-platform.vercel.app/)
 
+![Project image(https://imgur.com/lN4sfCS)]
+
 ## Tools used in the project
 
 - [React.JS](https://pt-br.reactjs.org/)
