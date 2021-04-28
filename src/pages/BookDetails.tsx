@@ -6,20 +6,7 @@ import BookText from '../components/molecules/BookText/BookText';
 import BackButton from '../components/atoms/BackButton/BackButton';
 import FloatMenu from '../components/molecules/FloatMenu/FloatMenu';
 import Backdrop from '../components/molecules/Backdrop/Backdrop';
-
-interface Book {
-    id: string;
-    volumeInfo: {
-        authors: string[];
-        imageLinks: {
-            smallThumbnail: string;
-            thumbnail: string;
-        };
-        title: string;
-        subtitle?: string;
-        description: string;
-    }
-}
+import { Book } from '../types';
 
 const BookDetails: React.FC = () => {
   const [book, setBook] = useState<Book>();
@@ -51,10 +38,10 @@ const BookDetails: React.FC = () => {
               authors={book.volumeInfo.authors}
               description={book.volumeInfo.description}
             />
-                      )}
+          )}
         />
       )}
-      <FloatMenu />
+      <FloatMenu book={book} />
     </>
   );
 };
