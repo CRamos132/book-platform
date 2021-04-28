@@ -16,6 +16,10 @@ const Button = styled.button`
     &:hover {
         box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
     }
+    &:disabled {
+        background-color: gray;
+        cursor: not-allowed;
+    }
 `;
 
 export default Button;
