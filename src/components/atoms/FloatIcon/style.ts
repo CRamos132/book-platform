@@ -8,6 +8,7 @@ const IconWrapper = styled.button`
     color: #3F4043;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 `;
 
 const Icon = styled.img`

@@ -23,6 +23,8 @@ const book1: Book = {
       thumbnail: 'http://books.google.com/books/publisher/content?id=dsz5AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70JNJgkukGPnaTnaNNJsuSOjCQI7Xhw__QCCY9AKs9YAcBepBMR6ZI4uDR_erRuRMfK3Rzm6L8BrT0JLRznwvg3lUnTdxXeS_BO2IcjpG-gSeJ8tu7RCdFc1J_U_9QjuQN_Nmz7&source=gbs_api',
     },
     title: 'Hooked',
+    canonicalVolumeLink: '',
+    description: '',
   },
 };
 const book2: Book = {
@@ -34,6 +36,8 @@ const book2: Book = {
       thumbnail: 'http://books.google.com/books/publisher/content?id=rB2ZDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE7276yeo3cE2ALA9kxw8jb4x4Y0adUkm8r2YDOo1-gXhgQ60K7fUZaI-eGOhbgXJJMRgk0gMK1xQtFo4H578zY9rHl9as-oPN1aTBE6lY78q_5voDkPcEQUYQ5Ld7QrgUyBNUigg&source=gbs_api',
     },
     title: 'The ONE Thing',
+    canonicalVolumeLink: '',
+    description: '',
   },
 };
 const book3: Book = {
@@ -45,6 +49,8 @@ const book3: Book = {
       thumbnail: 'http://books.google.com/books/publisher/content?id=eLRhDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72PDU2Kx4BMknQKg3Qw3G-L8O13rLZMYxnZ_QPeVPuXNpaJlcdfYuCU-7VfQKZKfPhWpI9-LdZSd0FVMCLoz37a2En7eo__d5MzeCTrrYli56UxbWiYAoGqjiDtzyykeeh_ceTJ&source=gbs_api',
     },
     title: 'Originais',
+    canonicalVolumeLink: '',
+    description: '',
   },
 };
 const bookArray = [book1, book2, book3];
