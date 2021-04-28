@@ -93,7 +93,7 @@ const Landing: React.FC = () => {
               Mehmed Al Fatih 👋
             </span>
           </Header>
-          <HomeHeader title="Discover new books" link="More" to="/" />
+          <HomeHeader title="Discover new books" link="More" to="/more" />
           <HorizontalScroll id="main-books">
             {bookArray.map(((book, index) => {
               const type = index % 2 ? '2' : '1';
@@ -107,9 +107,9 @@ const Landing: React.FC = () => {
               );
             }))}
           </HorizontalScroll>
-          <HomeHeader title="Currently Reading" link="All" to="/" />
+          <HomeHeader title="Currently Reading" link="All" to="/currently" />
           <CurrentCard id="currently-reading" book={book3} />
-          <HomeHeader title="Reviews of The Days" link="All Video" to="/" />
+          <HomeHeader title="Reviews of The Days" link="All Video" to="/reviews" />
           <ReviewCard />
         </TextContainer>
       )}

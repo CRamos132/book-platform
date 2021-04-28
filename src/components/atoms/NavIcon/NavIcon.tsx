@@ -8,7 +8,7 @@ interface NavIconsProps {
 }
 
 const NavIcon: React.FC<NavIconsProps> = ({ src, path, active }) => (
-  <IconWrapper to="/" active={active === path ? 'active' : 'inactive'}>
+  <IconWrapper to={`/${path}`} active={active === path ? 'active' : 'inactive'}>
     <Icon
       src={src}
       alt={`Path to ${path}`}
