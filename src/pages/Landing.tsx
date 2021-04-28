@@ -59,15 +59,15 @@ const Landing: React.FC = () => {
   const [qValue, setValue] = useState('');
   const history = useHistory();
   const handleQuery = (query: string): void => {
-    history.push(`/search?q=${query}`);
+    if (query) {
+      history.push(`/search?q=${query}`);
+    }
   };
   const debouncedAction = useDebounce(handleQuery, 500);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
     setValue(value);
-    if (value) {
-      debouncedAction(value);
-    }
+    debouncedAction(value);
   };
 
   return (
