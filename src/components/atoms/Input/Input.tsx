@@ -6,8 +6,7 @@ const Input = styled.input`
     font-size: 0.9em;
     color: black;
     padding: 15px;
-    width: 90%;
-    margin: auto;
+    width: 100%;
     border: none;
     ::placeholder,
     ::-webkit-input-placeholder {

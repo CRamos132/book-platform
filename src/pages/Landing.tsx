@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import useDebounce from '../helpers/debounce';
-import Input from '../components/atoms/Input/Input';
 import Main from '../components/templates/Main/Main';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import HorizontalScroll from '../components/atoms/HorizontalScroll/HorizontalScroll';
@@ -13,6 +12,7 @@ import HomeHeader from '../components/molecules/HomeHeader/HomeHeader';
 import ReviewCard from '../components/molecules/ReviewCard/ReviewCard';
 import CurrentCard from '../components/organisms/CurrentCard/CurrentCard';
 import { Book } from '../types';
+import SearchInput from '../components/molecules/SearchInput/SearchInput';
 
 const book1: Book = {
   id: 'dsz5AwAAQBAJ',
@@ -59,19 +59,23 @@ const Landing: React.FC = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
     setValue(value);
-    debouncedAction(value);
+    if (value) {
+      debouncedAction(value);
+    }
   };
 
   return (
     <Main
       top={(
-        <Input
-          type="search"
-          onChange={handleChange}
-          value={qValue}
-          name="query"
-          placeholder="Search"
-        />
+        <>
+          <SearchInput
+            type="search"
+            onChange={handleChange}
+            value={qValue}
+            name="query"
+            placeholder="Search book"
+          />
+        </>
     )}
       body={(
         <TextContainer>
