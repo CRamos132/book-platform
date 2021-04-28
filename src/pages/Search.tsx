@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Input from '../components/atoms/Input/Input';
 import BookList from '../components/molecules/BookList/BookList';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
+import SearchInput from '../components/molecules/SearchInput/SearchInput';
 import Main from '../components/templates/Main/Main';
 import useDebounce from '../helpers/debounce';
 import getUrlParam from '../helpers/getUrlParam';
@@ -26,7 +26,7 @@ const Search: React.FC = () => {
   return (
     <Main
       top={(
-        <Input
+        <SearchInput
           type="search"
           name="query"
           value={displayQuery}
