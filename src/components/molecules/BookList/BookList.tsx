@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../atoms/Button/Button';
+import ReadingTypography from '../../atoms/ReadingTypography/ReadingTypography';
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper';
 import BookCard from '../../organisms/BookCard/BookCard';
 
@@ -30,13 +31,13 @@ const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => (
           id={book.id}
           thumbnail={
               book?.volumeInfo?.imageLinks?.smallThumbnail
-              || 'https://via.placeholder.com/100x153'
+              || './images/notavailable.jpg'
             }
           title={book.volumeInfo.title}
           authors={book.volumeInfo.authors}
         />
       ))}
-    {status === 'waiting' && <span>Loading</span>}
+    {status === 'waiting' && <ReadingTypography text="Loading" />}
     {(status === 'complete' || status === 'waiting') && (
       <Button
         id="load-more"
@@ -46,7 +47,7 @@ const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => (
         Load more
       </Button>
     )}
-    {status === 'empty' && <span>No books were found</span>}
+    {status === 'empty' && <ReadingTypography text="No books were found" />}
   </VerticalWrapper>
 );
 
