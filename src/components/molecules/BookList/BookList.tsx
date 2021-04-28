@@ -44,7 +44,9 @@ const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => {
           authors={book.volumeInfo.authors}
         />
       ))}
-      {status === 'complete' && <Button onClick={handleLoad}>Load more</Button>}
+      {status === 'complete' && (
+        <Button id="load-more" onClick={handleLoad}>Load more</Button>
+      )}
       {status === 'waiting' && <span>Loading</span>}
       {status === 'empty' && <span>No books were found</span>}
     </VerticalWrapper>

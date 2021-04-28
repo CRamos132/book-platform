@@ -20,7 +20,7 @@ const BookCard: React.FC<BookCardProps> = ({
     history.push(`/book?id=${id}`);
   };
   return (
-    <CardWrapper>
+    <CardWrapper id={id}>
       <BookCoverSm
         src={thumbnail}
         alt={`${title} book cover`}
