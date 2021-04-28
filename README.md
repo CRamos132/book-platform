@@ -37,4 +37,4 @@ Will open the test suite, you must have the project running locally to run the t
 
 ### Contact me
 
-- [LinkedIn](https://www.linkedin.com/in/heitor-gon%C3%A7alves-de-paula-ramos-316abb194/
+- [LinkedIn](https://www.linkedin.com/in/heitor-gon%C3%A7alves-de-paula-ramos-316abb194/)
