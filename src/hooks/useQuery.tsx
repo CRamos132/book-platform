@@ -1,21 +1,18 @@
 import { useState, useEffect } from 'react';
+import { Book } from '../types';
 
-interface Book {
-    volumeInfo: {
-        authors: string[];
-        imageLinks: {
-            smallThumbnail: string;
-            thumbnail: string;
-        };
-        title: string;
-    }
-}
-
+/**
+ * A custom hook to handle book query requests to the Google Books
+ * API
+ * @param query the query string that will be used on the request
+ * @returns books: an array of queried books | the query status |
+ * a function to load more books
+ */
 const useQuery = (query: string): [
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    any[],
+    Book[],
     'waiting' | 'complete' | 'error' | 'empty',
-    (start: string) => void
+    (start: string) => void,
 ] => {
   const [books, setBooks] = useState<Book[]>([]);
   const [limit, setLimit] = useState<number>();
@@ -51,6 +48,7 @@ const useQuery = (query: string): [
       });
   }, [query]);
   const loadMore = (start: string): void => {
+    setStatus('waiting');
     const currentBooks = [...books];
     if (limit && Number(start) > limit) {
       // make button to load more disapear

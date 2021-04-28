@@ -1,5 +1,16 @@
 import { useRef } from 'react';
-
+/**
+ * A debouncer hook to delay functions
+ *
+ * Example:
+ *
+ * const debouncedAction = useDebounce(()=>{alert('hi)}, 500);
+ *
+ * calling debouncedAction() will wait then alert
+ * @param action the function you want to debounce
+ * @param wait  the wait untill the function is called
+ * @returns the debounced function
+ */
 const useDebounce = (
   action: (...args: string[]) => void,
   wait: number,
