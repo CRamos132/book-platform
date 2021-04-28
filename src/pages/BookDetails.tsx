@@ -27,9 +27,9 @@ const BookDetails: React.FC = () => {
           top={(
             <BookCoverMd
               src={book?.volumeInfo?.imageLinks?.smallThumbnail
-                || 'https://via.placeholder.com/100x153'}
+                || './images/notavailable.jpg'}
             />
-                      )}
+          )}
           center={(
             <BookText
               title={book.volumeInfo.title}

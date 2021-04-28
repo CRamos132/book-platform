@@ -71,7 +71,7 @@ const CurrentCard: React.FC<CurrentProps> = ({ book, id }) => {
         className="book-cover"
         src={
         book.volumeInfo.imageLinks.smallThumbnail
-        || 'https://via.placeholder.com/100x153'
+        || './images/notavailable.jpg'
       }
         alt="Book cover"
       />

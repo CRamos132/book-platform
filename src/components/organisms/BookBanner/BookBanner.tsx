@@ -42,7 +42,7 @@ const BookBanner: React.FC<BookBannerProps> = ({ type, book, id }) => {
           </div>
           <img
             src={book?.volumeInfo?.imageLinks?.smallThumbnail
-              || 'https://via.placeholder.com/100x153'}
+              || './images/notavailable.jpg'}
             alt="Book cover"
           />
         </div>
