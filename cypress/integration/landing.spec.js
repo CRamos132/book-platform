@@ -42,37 +42,4 @@ context('The landing page', () => {
       cy.get('h1').contains('The ONE Thing')
     });
   })
-  context('the search bar', () => {
-    it('redirects correctly', () => {
-      cy.get('input[name=query]').type('test')
-      cy.url().should('eq', 'http://localhost:3000/search?q=test')
-    });
-    it('displays the correct message if no books were found', () => {
-      cy.intercept(
-        'GET', 
-        'https://www.googleapis.com/books/v1/volumes?q=test&startIndex=0&maxResults=12',
-        {
-          statusCode: 200,
-            body: {}
-        }
-      )
-      cy.get('input[name=query]').type('test')
-      cy.get('main').contains('No books were found')
-    })
-    it('displays the correct amount of results', () => {
-      cy.intercept(
-        'GET', 
-        'https://www.googleapis.com/books/v1/volumes?q=test&startIndex=0&maxResults=12',
-        {
-          statusCode: 200,
-            body: {
-              totalItems: 2,
-              items: [book1, book2]
-            }
-        }
-      )
-      cy.get('input[name=query]').type('test')
-      cy.get('main').children('article').should('have.length', 2);
-    })
-  })
 });
