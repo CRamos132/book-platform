@@ -33,3 +33,8 @@ Will start the project on the [browser](http://localhost:3000)
 ### `yarn cypress`
 
 Will open the test suite, you must have the project running locally to run the tests.
+
+
+### Contact me
+
+- [LinkedIn](https://www.linkedin.com/in/heitor-gon%C3%A7alves-de-paula-ramos-316abb194/
