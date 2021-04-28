@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Title = styled.span`
+    display: block;
     font-size: 0.7em;
     margin: 10px 0px 5px;
     width: 100%;
