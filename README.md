@@ -1,46 +1,35 @@
-# Desafio Frontend
+# Book platform
 
-Clone este repositório e comece já o nosso desafio.
+This is a project developed with [React](https://pt-br.reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
+to query and list books from the Google [Books API](https://developers.google.com/books).
+The project was structured to use [Atomic Design](https://github.com/danilowoz/react-atomic-design) as the base for folder structuring.
 
-Use React ou RN dependendo da vaga que você estiver tentando.
+The deployed project can be found [here](https://book-platform.vercel.app/)
 
-OBS: Caso tenha alguma dúvida em relação ao teste é só nos mandar sua pergunta no canal #challenge-foton do Slack do [React Brasil](https://react-brasil-slack.herokuapp.com/).
+## Tools used in the project
 
-## API
-
-Use a api do [google books](https://developers.google.com/books/docs/v1/using) para os dados da tela.
-
-```js
-const query = 'harry potter';
-fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-```
-
-OBS: Pode ser utilizado a forma de chamada de apis de sua preferencia (fetch, axios, etc).
-
-## Design/Telas
-https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
-
-<img width="581" alt="Screen Shot 2021-04-13 at 10 19 47" src="https://user-images.githubusercontent.com/13947203/114559257-eb55ad00-9c41-11eb-9617-4e7627cc373e.png">
+- [React.JS](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled components](https://styled-components.com/)
+- [Books API](https://developers.google.com/books)
+- [Atomic Design](https://github.com/danilowoz/react-atomic-design)
+- [ESLint](https://eslint.org/)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
+- [Cypress](https://www.cypress.io/)
 
 
-O design do site consiste em 3 telas, sendo elas:
+## Project instructions
 
-### Home
+To run the project locally after cloning the repository you can use the following comands:
 
-1. Crie a tela pixel perfect com base no design acima
-2. Os livros precisam ser clicáveis para mostrar a tela de detalhes
+### `yarn install`
 
-### Search
+Will install all the dependencies of the project
 
-Nesta tela é **obrigatório** que o usuário tenha possibilidade de:
+### `yarn start`
 
-1. Ver a lista dos livros baseado na busca;
-2. Possibilitar buscar mais livros com um botão no estilo "Load more";
-3. Buscar livros pelo nome;
-4. Clicar em um dos livros para ver seus detalhes.
+Will start the project on the [browser](http://localhost:3000)
 
-### Detalhes do Livro
+### `yarn cypress`
 
-Nesta tela é **obrigatório** que o usuário tenha possibilidade de:
-
-1. Ver as informações completas do livro selecionado;
+Will open the test suite, you must have the project running locally to run the tests.
