@@ -1,4 +1,5 @@
 import React from 'react';
+import { Book } from '../../../types';
 import Button from '../../atoms/Button/Button';
 import ReadingTypography from '../../atoms/ReadingTypography/ReadingTypography';
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper';
@@ -8,18 +9,6 @@ interface BookListProps {
     books: Book[];
     status: 'waiting' | 'complete' | 'error' | 'empty';
     loadMore: () => void;
-}
-
-interface Book {
-    id: string;
-    volumeInfo: {
-        authors: string[];
-        imageLinks: {
-            smallThumbnail: string;
-            thumbnail: string;
-        };
-        title: string;
-    }
 }
 
 const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => (
