@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../../atoms/Button/Button';
 import VerticalWrapper from '../../atoms/VerticalWrapper/VerticalWrapper';
 import BookCard from '../../organisms/BookCard/BookCard';
@@ -6,7 +6,7 @@ import BookCard from '../../organisms/BookCard/BookCard';
 interface BookListProps {
     books: Book[];
     status: 'waiting' | 'complete' | 'error' | 'empty';
-    loadMore: (start: string) => void;
+    loadMore: () => void;
 }
 
 interface Book {
@@ -21,17 +21,9 @@ interface Book {
     }
 }
 
-const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => {
-  const [count, setCount] = useState(0);
-  const handleLoad = (): void => {
-    const newCount = count + 12;
-    loadMore(String(newCount));
-    setCount(newCount);
-    // reset the count when you restart the query
-  };
-  return (
-    <VerticalWrapper>
-      {status === 'complete' && books.length > 0
+const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => (
+  <VerticalWrapper>
+    {(status === 'complete' || status === 'waiting') && books.length > 0
       && books?.map((book: Book) => (
         <BookCard
           key={`book_card_${book.id}`}
@@ -44,13 +36,18 @@ const BookList: React.FC<BookListProps> = ({ books, status, loadMore }) => {
           authors={book.volumeInfo.authors}
         />
       ))}
-      {status === 'complete' && (
-        <Button id="load-more" onClick={handleLoad}>Load more</Button>
-      )}
-      {status === 'waiting' && <span>Loading</span>}
-      {status === 'empty' && <span>No books were found</span>}
-    </VerticalWrapper>
-  );
-};
+    {status === 'waiting' && <span>Loading</span>}
+    {(status === 'complete' || status === 'waiting') && (
+      <Button
+        id="load-more"
+        disabled={status !== 'complete'}
+        onClick={loadMore}
+      >
+        Load more
+      </Button>
+    )}
+    {status === 'empty' && <span>No books were found</span>}
+  </VerticalWrapper>
+);
 
 export default BookList;
