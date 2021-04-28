@@ -15,7 +15,6 @@ const BookDetails: React.FC = () => {
     fetch(`https://www.googleapis.com/books/v1/volumes/${id}`)
       .then(async (response) => {
         const data = await response.json();
-        // console.log(data);
         setBook(data);
       });
   }, []);
