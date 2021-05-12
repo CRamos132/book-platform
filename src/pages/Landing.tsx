@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import useDebounce from '../helpers/debounce';
+import useDebounce from '../hooks/useDebounce';
 import Main from '../components/templates/Main/Main';
 import NavMenu from '../components/molecules/NavMenu/NavMenu';
 import HorizontalScroll from '../components/atoms/HorizontalScroll/HorizontalScroll';
