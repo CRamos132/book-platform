@@ -38,12 +38,6 @@ Will start the project on the [browser](http://localhost:3000)
 
 Will open the test suite, you must have the project running locally to run the tests.
 
-## Known issues to be improved
-
-- Currently there's no backend deployed so even the deployed version needs the backend running locally
-- Not having a backend deployed makes it so cypress can't run on an action correctly
-- The end to end tests manipulate the backend directly
-
 ### Contact me
 
 - [LinkedIn](https://www.linkedin.com/in/camille-ramos-316abb194/)
